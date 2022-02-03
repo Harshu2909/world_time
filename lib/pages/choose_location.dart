@@ -26,7 +26,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
   void updateTime(index) async {
 
     WorldTime instance = locations[index];
-    print(locations[index]);
+    // print(locations[index]);
     await instance.getTime();
 
     // naviget to home screen
@@ -59,7 +59,9 @@ class _ChooseLocationState extends State<ChooseLocation> {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 5),
             child: Card(
+              color: Colors.teal[100],
               child: ListTile(
+                
                 onTap: () {
                   updateTime(index);
                 },

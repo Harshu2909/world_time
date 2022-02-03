@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 FlatButton.icon(
-                    color: Colors.teal[100],
+                    color: Colors.redAccent,
                     onPressed: () async {
                       dynamic result =
                           await Navigator.pushNamed(context, '/location');
