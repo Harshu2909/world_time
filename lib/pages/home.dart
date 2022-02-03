@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
 
 //set background
 
-    String bgImage = data['isDaytime'] ? 'day.jpg' : 'night.jpg';
+    String bgImage = data['isDaytime'] ? 'day.png' : 'night.png';
     // Color bgColor = data['isDaytime'] ? Colors.orange[200] : Colors.black;
 
     return Scaffold(
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 FlatButton.icon(
-                    color: Colors.teal[200],
+                    color: Colors.teal[100],
                     onPressed: () async {
                       dynamic result =
                           await Navigator.pushNamed(context, '/location');
@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
                 ),
                 Text(
                   data['time'],
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  style: TextStyle(fontSize: 50, color: Colors.white),
                 ),
               ],
             ),

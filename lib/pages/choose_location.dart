@@ -24,7 +24,9 @@ class _ChooseLocationState extends State<ChooseLocation> {
   ];
 
   void updateTime(index) async {
+
     WorldTime instance = locations[index];
+    print(locations[index]);
     await instance.getTime();
 
     // naviget to home screen
@@ -32,7 +34,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
       'location': instance.location,
       'flag': instance.flag,
       'time': instance.time,
-      'isDaytime': instance.isDayTime
+      'isDaytime': instance.isDayTime,
     });
   }
 
@@ -59,7 +61,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
             child: Card(
               child: ListTile(
                 onTap: () {
-                  updateTime(context);
+                  updateTime(index);
                 },
                 title: Text('${locations[index].location}'),
                 leading: CircleAvatar(
